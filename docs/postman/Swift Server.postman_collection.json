@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "e7b9fda9-049b-46d6-a57a-fefd2b444cbb",
+		"name": "Swift Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"handle\": \"updated2\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/test/00000000-0000-0000-D9EF-0B0000000000",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"test",
+						"00000000-0000-0000-D9EF-0B0000000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"handle\": \"sdfsdF\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

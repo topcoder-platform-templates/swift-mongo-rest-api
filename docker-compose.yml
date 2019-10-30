@@ -1,0 +1,20 @@
+version: '2'
+services:
+  database:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: myPassword3
+  appswift:
+    build: server
+    depends_on: [database]
+    links:
+      - database
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_NAME: test
+      DATABASE_HOST: database
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: myPassword3
